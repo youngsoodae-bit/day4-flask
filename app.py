@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
+import os
 from datetime import datetime
 
 app = Flask(__name__)
@@ -72,6 +73,8 @@ def delete_post(id):
         conn.execute('DELETE FROM post WHERE id = ?', (id,))
     return redirect(url_for('post_list'))
 
+init_db()
+
 if __name__ == '__main__':
-    init_db()
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
