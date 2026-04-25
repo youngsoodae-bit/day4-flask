@@ -49,6 +49,29 @@ def write_post():
         return redirect(url_for('post_list'))
     return render_template('write_post.html')
 
+@app.route('/post/<int:id>/edit', methods=['GET', 'POST'])
+def edit_post(id):
+    with get_db() as conn:
+        post = conn.execute('SELECT * FROM post WHERE id = ?', (id,)).fetchone()
+    if post is None:
+        return '404 Not Found', 404
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        with get_db() as conn:
+            conn.execute(
+                'UPDATE post SET title = ?, content = ? WHERE id = ?',
+                (title, content, id)
+            )
+        return redirect(url_for('post_detail', id=id))
+    return render_template('write_post.html', post=post)
+
+@app.route('/post/<int:id>/delete', methods=['POST'])
+def delete_post(id):
+    with get_db() as conn:
+        conn.execute('DELETE FROM post WHERE id = ?', (id,))
+    return redirect(url_for('post_list'))
+
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)

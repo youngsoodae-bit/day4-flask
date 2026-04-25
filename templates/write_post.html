@@ -52,14 +52,14 @@
     <div class="text-xl font-medium italic text-stone-800 tracking-tight">The Curator</div>
     <div class="flex items-center gap-3">
       <button type="submit" form="write-form" class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full text-[14px] font-semibold transition-transform duration-200 active:scale-95 shadow-sm">
-        Publish
+        {{ '저장' if post else 'Publish' }}
       </button>
     </div>
   </div>
 </header>
 
 <main class="flex-grow pt-8 pb-8 px-5 md:px-6 overflow-y-auto">
-  <form id="write-form" method="POST" action="/write" class="max-w-[800px] mx-auto w-full">
+  <form id="write-form" method="POST" action="{{ '/post/' ~ post.id ~ '/edit' if post else '/write' }}" class="max-w-[800px] mx-auto w-full">
 
     <div class="mb-3 flex flex-wrap gap-2">
       <span class="px-3 py-1 bg-primary/10 text-primary text-[12px] tracking-widest font-semibold rounded-full uppercase">JOURNAL</span>
@@ -72,6 +72,7 @@
         required
         placeholder="Title"
         spellcheck="false"
+        value="{{ post.title if post else '' }}"
         class="w-full bg-transparent border-none p-0 text-[48px] leading-[1.1] tracking-[-0.02em] font-semibold distraction-free placeholder:text-stone-300 text-on-surface"
       />
     </div>
@@ -90,7 +91,7 @@
       placeholder="Tell your story..."
       spellcheck="true"
       class="w-full bg-transparent border-none p-0 text-[18px] leading-[1.6] distraction-free placeholder:text-stone-300 min-h-[400px] resize-none text-on-surface"
-    ></textarea>
+    >{{ post.content if post else '' }}</textarea>
 
   </form>
 </main>

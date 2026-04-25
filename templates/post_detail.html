@@ -76,6 +76,16 @@
       <span class="material-symbols-outlined text-[20px]">arrow_back</span>
       목록으로
     </a>
+    <a href="/post/{{ post.id }}/edit" class="bg-[#D2B48C] text-white px-8 py-3 rounded-lg text-[16px] flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5 active:scale-95">
+      <span class="material-symbols-outlined text-[20px]">edit_note</span>
+      수정
+    </a>
+    <form method="POST" action="/post/{{ post.id }}/delete" class="ml-auto" onsubmit="return confirm('정말 삭제할까요?')">
+      <button type="submit" class="bg-transparent text-error px-6 py-3 rounded-lg text-[16px] flex items-center gap-2 transition-all duration-200 hover:bg-error/5 active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">delete</span>
+        삭제
+      </button>
+    </form>
   </section>
 </main>
 
