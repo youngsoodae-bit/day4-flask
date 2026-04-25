@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#e1c299",
+                    "surface-tint": "#725a39",
+                    "tertiary-container": "#b9b9b6",
+                    "surface-bright": "#fff8f3",
+                    "outline-variant": "#d1c5b8",
+                    "inverse-surface": "#343029",
+                    "on-primary-container": "#5b4526",
+                    "error": "#ba1a1a",
+                    "secondary": "#5e604d",
+                    "on-error": "#ffffff",
+                    "tertiary": "#5e5f5d",
+                    "secondary-fixed-dim": "#c8c8b0",
+                    "on-primary-fixed": "#281801",
+                    "surface-container-high": "#f0e7dd",
+                    "secondary-container": "#e1e1c9",
+                    "outline": "#7f766a",
+                    "primary-fixed": "#feddb3",
+                    "on-secondary-container": "#636451",
+                    "surface-container": "#f6ece3",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#d2b48c",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#1b1d0e",
+                    "surface-container-highest": "#eae1d7",
+                    "surface": "#fff8f3",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f8efe5",
+                    "surface-variant": "#eae1d7",
+                    "on-tertiary-container": "#484a48",
+                    "primary-fixed-dim": "#e1c299",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "on-background": "#1f1b15",
+                    "on-surface-variant": "#4d453c",
+                    "primary": "#725a39",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fff8f3",
+                    "surface-container-low": "#fbf2e8",
+                    "on-surface": "#1f1b15",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-primary-fixed-variant": "#584324",
+                    "surface-dim": "#e1d9cf",
+                    "secondary-fixed": "#e4e4cc",
+                    "on-secondary-fixed-variant": "#474836"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-md": "32px",
+                    "container-max": "1120px",
+                    "gutter": "24px",
+                    "stack-lg": "64px",
+                    "stack-sm": "12px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "h1": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAF9F6;
+        }
+        .distraction-free-focus:focus {
+            outline: none;
+        }
+        .editor-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#FAF9F6] dark:bg-stone-950 border-b border-stone-200/50 dark:border-stone-800/50 shadow-[0_4px_20px_rgba(74,69,62,0.05)] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="text-stone-400 dark:text-stone-500 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors duration-200 p-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="hidden md:block h-6 w-[1px] bg-outline-variant/30"></div>
+<div class="hidden md:flex gap-4 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant opacity-60">DRAFT SAVED</span>
+</div>
+</div>
+<div class="text-xl font-h1 font-medium italic text-stone-800 dark:text-stone-100 font-['Plus_Jakarta_Sans'] tracking-tight">
+                The Curator
+            </div>
+<div class="flex items-center gap-3">
+<button class="hidden md:flex items-center gap-2 px-4 py-2 text-stone-400 font-medium hover:text-stone-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-label-caps text-label-caps">Preview</span>
+</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-h2 text-[14px] font-semibold transition-transform duration-200 active:scale-95 shadow-sm">
+                    Publish
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-stack-lg pb-stack-lg px-margin-mobile md:px-gutter overflow-y-auto">
+<div class="editor-container w-full">
+<!-- Category Tag Selection -->
+<div class="mb-stack-sm flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary font-label-caps text-label-caps rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
+                    REFLECTIONS
+                </span>
+<button class="px-3 py-1 border border-outline-variant/50 text-on-surface-variant font-label-caps text-label-caps rounded-full hover:bg-surface-variant transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="add">add</span>
+                    ADD CATEGORY
+                </button>
+</div>
+<!-- Title Field -->
+<div class="mb-stack-md">
+<input class="w-full bg-transparent border-none p-0 text-display font-display distraction-free-focus placeholder:text-stone-300 text-on-surface" placeholder="Title" spellcheck="false" type="text"/>
+</div>
+<!-- Author / Meta Info -->
+<div class="flex items-center gap-4 mb-stack-lg">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Author avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a woman with a kind expression, soft natural lighting, minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChuecLrhXrrPuffce12PEPZXLHM8Tl9tg0hgEwUoh5boyhHyujtbKcIcqoV3Nd5fgJs9jQeOxA8OBo6wIDD_nvV7FEA-DPLyU1t3fqa1O43t_K_Bn2WnaqOoFisiEEGToq_5WONIPPdwO6M1bYBMYiGw4k5jdHmz0sz3sb0nmGp0u94Bwa-J0qsv278TepAwOydariN7qBobW2fjLcILZW9GZp3DszmH7liKgrpHLuP37hT1lRlqYKQ2JUBnlkdCxeN8I7Rj_cg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-h2 text-[16px] text-on-surface">Elena Vance</span>
+<span class="font-body-md text-[13px] text-on-surface-variant opacity-70 italic">Curating since 2021</span>
+</div>
+</div>
+<!-- Editor Toolbar (Floating or Subtle Inline) -->
+<div class="sticky top-[88px] z-40 mb-stack-md bg-[#FAF9F6]/80 backdrop-blur-sm py-2 border-y border-stone-200/30 flex items-center gap-6 text-on-surface-variant overflow-x-auto no-scrollbar">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="format_bold">format_bold</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="format_italic">format_italic</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="format_quote">format_quote</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="link">link</span></button>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="image">image</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="list">list</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="format_size">format_size</span></button>
+</div>
+<!-- Content Area -->
+<div class="relative">
+<textarea class="w-full bg-transparent border-none p-0 text-body-lg font-body-lg distraction-free-focus placeholder:text-stone-300 min-h-[530px] resize-none leading-relaxed text-on-surface" placeholder="Tell your story..." spellcheck="true"></textarea>
+<!-- Editorial Pull Quote Preview (Mockup Interaction) -->
+<div class="mt-stack-md border-l-4 border-primary pl-gutter py-4 bg-surface-container-low rounded-r-lg">
+<p class="font-body-lg italic text-on-surface opacity-80">
+                        "The beauty of slow consumption is not in the time it takes, but in the space it leaves for the reader's own thoughts to bloom."
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Hidden on this screen per suppression rules for focused tasks) -->
+<!-- The BottomNavBar is suppressed here to prioritize the "Distraction-Free" writing flow -->
+<!-- Contextual FAB (Suppressed on writing screen per task focus) -->
+<!-- Subtle Footer for Stats -->
+<footer class="md:fixed bottom-0 left-0 w-full bg-transparent pointer-events-none px-6 py-4">
+<div class="max-w-[1120px] mx-auto flex justify-between items-center pointer-events-auto">
+<div class="bg-[#FAF9F6]/90 backdrop-blur shadow-sm border border-stone-200/50 rounded-full px-4 py-2 flex items-center gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="history_edu">history_edu</span>
+<span class="font-label-caps text-label-caps">142 WORDS</span>
+</div>
+<div class="h-3 w-[1px] bg-outline-variant/50"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-label-caps">1 MIN READ</span>
+</div>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary/10 transition-all duration-200 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary/10 transition-all duration-200 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

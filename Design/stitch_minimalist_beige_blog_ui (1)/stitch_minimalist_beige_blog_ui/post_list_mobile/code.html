@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5e604d",
+                        "error": "#ba1a1a",
+                        "tertiary": "#5e5f5d",
+                        "secondary-fixed-dim": "#c8c8b0",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d1c5b8",
+                        "tertiary-container": "#b9b9b6",
+                        "surface-tint": "#725a39",
+                        "surface-bright": "#fff8f3",
+                        "inverse-primary": "#e1c299",
+                        "on-primary-container": "#5b4526",
+                        "inverse-surface": "#343029",
+                        "outline": "#7f766a",
+                        "surface-container": "#f6ece3",
+                        "primary-fixed": "#feddb3",
+                        "on-secondary-container": "#636451",
+                        "surface-container-high": "#f0e7dd",
+                        "secondary-container": "#e1c299",
+                        "on-primary-fixed": "#281801",
+                        "on-secondary-fixed": "#1b1d0e",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#d2b48c",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f8efe5",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#eae1d7",
+                        "surface": "#fff8f3",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#464745",
+                        "tertiary-fixed": "#e3e2e0",
+                        "surface-container-low": "#fbf2e8",
+                        "on-surface": "#1f1b15",
+                        "background": "#fff8f3",
+                        "primary": "#725a39",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4d453c",
+                        "surface-dim": "#e1d9cf",
+                        "secondary-fixed": "#e4e4cc",
+                        "on-secondary-fixed-variant": "#474836",
+                        "on-primary-fixed-variant": "#584324",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "primary-fixed-dim": "#e1c299",
+                        "on-tertiary-container": "#484a48",
+                        "surface-variant": "#eae1d7",
+                        "on-background": "#1f1b15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "container-max": "1120px",
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pull-quote {
+            border-left: 4px solid #D2B48C;
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 20px rgba(74, 69, 62, 0.05);
+        }
+        .active-shadow {
+            box-shadow: 0 8px 30px rgba(210, 180, 140, 0.12);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#FAF9F6] dark:bg-stone-950 docked full-width top-0 sticky z-50 border-b border-stone-100 dark:border-stone-900 shadow-[0_4px_20px_rgba(74,69,62,0.05)] font-['Plus_Jakarta_Sans'] antialiased tracking-tight">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<button class="active:scale-95 duration-200 ease-in-out hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#D2B48C] dark:text-[#E6D2B5]" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-semibold text-stone-800 dark:text-stone-100 italic">The Curator</h1>
+<div class="active:scale-95 duration-200 ease-in-out hover:opacity-80 transition-opacity">
+<img alt="User profile portrait" class="w-8 h-8 rounded-full object-cover" data-alt="Close-up portrait of a woman with a kind expression, soft natural window lighting, clean minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzyr05qsjTL6cWEmJJNmB1hvpcNftj6n7YwIYwkJ8YkF4lHessv8Q9u5EoWtVj4-0mNVYhZ4gku3fC9Lmi6avsJchik3U_662yht1jNs0u41SY2LxI1xHu0Aev0dNWGVpEkkVY6jmlt8ddvfu2xeIC-woR2lmZeT6JRIFhrBzVz7CkEb_fA-81nxvQERNrBInBk1BNO3E5R-61CHKchfeelQJ9uxCMt1vEics49sxH3xYF1BYg1WvG34rv5EQaTxoFkMJWK8n34g"/>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile pt-stack-sm">
+<!-- Search and Filter -->
+<section class="mb-stack-md">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container border-none rounded-lg py-3 pl-12 pr-4 focus:ring-2 focus:ring-primary-container font-body-md text-on-surface-variant" placeholder="Search curated thoughts..." type="text"/>
+</div>
+<div class="flex gap-stack-sm mt-4 overflow-x-auto pb-2 no-scrollbar">
+<span class="bg-primary-container/10 text-primary px-4 py-1 rounded-full font-label-caps whitespace-nowrap">PHILOSOPHY</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded-full font-label-caps whitespace-nowrap">ARTISTRY</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded-full font-label-caps whitespace-nowrap">LIFESTYLE</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded-full font-label-caps whitespace-nowrap">CRAFT</span>
+</div>
+</section>
+<!-- Featured Story (Asymmetric Bento Style) -->
+<section class="mb-stack-lg">
+<div class="group relative overflow-hidden rounded-lg premium-shadow bg-surface-container-low active:scale-95 duration-200">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Sun-drenched home office" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist bright sunlit workspace with a wooden desk, a ceramic vase with dried flowers, and soft shadows on the wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwSVtJgzg5EN4FHoyN5y9_gFcXrFQ765nzVtpQfjalAEpoVd6R_D8CCZo8KEr1Tb1AFG1iDKs9bMhQiDhUI4menvr9eJNjsmZvLklGJ0aLAkp8rLBKOdNYgFdy2pbt58QUmlL-IbmDZGrsxrbsY1QltxjWFMXDpGjuwfdDJ9tY3GCUVUZE9eZ-ErYNDnbQd13F9Zg2HqIFFIN4VzjVWyw0NGuoZYQp1s2EFJ6dh35nVbjOQxaCy4JyEkjLY9WoP5__F3KAPArug"/>
+</div>
+<div class="p-gutter">
+<span class="font-label-caps text-primary mb-2 block">EDITOR'S CHOICE</span>
+<h2 class="font-h1 text-on-surface mb-3">The Art of Slow Living in a Digital Age</h2>
+<p class="font-body-md text-on-surface-variant line-clamp-2">How intentionality transforms our relationship with time and technology, creating space for what truly matters.</p>
+</div>
+</div>
+</section>
+<!-- Post List -->
+<div class="space-y-stack-md">
+<!-- Pull Quote Break -->
+<div class="pull-quote px-6 py-4 my-stack-md bg-surface-container-lowest italic text-on-surface-variant">
+<p class="font-body-lg">"Exclusivity is not about keeping others out; it's about being fully present within."</p>
+</div>
+<!-- Standard List Items -->
+<article class="flex gap-4 items-start group">
+<div class="flex-1">
+<span class="font-label-caps text-primary opacity-70 mb-1 block">CRAFT</span>
+<h3 class="font-h2 text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">Finding Beauty in Imperfection: Wabi-Sabi</h3>
+<div class="flex items-center gap-2 text-outline text-sm">
+<span>4 min read</span>
+<span>•</span>
+<span>Dec 12</span>
+</div>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden premium-shadow">
+<img alt="Minimalist pottery" class="w-full h-full object-cover" data-alt="Close-up of a handcrafted ceramic bowl with organic texture on a neutral stone background in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLW0R-Q0CZehzWHKJ_ekrst3sdMYX6BC65fFpqXlClMvirGhTZbVvphj9H-5Q15QddBWRS6ggSh8sRLxFdk4HvDbGK83e56LU4me4TBNh0ZpjI6Dd1MXcTsE5-fkcYe7Rasw9AQH0P-LxSK175YiV8N1ODEsASzRVuTWtvDM0_hGUe75xMtW2VbDoXFtj5lGA9-QSYyGquIg7Vq3mGUHWNSARvSDV0h8pKvXRAn7J1fSpfVY_hlDFjq5G_dprPQjYF1I0oJSOuvQ"/>
+</div>
+</article>
+<article class="flex gap-4 items-start group">
+<div class="flex-1">
+<span class="font-label-caps text-primary opacity-70 mb-1 block">LIFESTYLE</span>
+<h3 class="font-h2 text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">The Morning Ritual: Reclaiming Your First Hour</h3>
+<div class="flex items-center gap-2 text-outline text-sm">
+<span>6 min read</span>
+<span>•</span>
+<span>Dec 10</span>
+</div>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden premium-shadow">
+<img alt="Steaming coffee cup" class="w-full h-full object-cover" data-alt="A steaming cup of tea on a rustic wooden table with an open journal and a pencil, soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1BdlsWXMMqjk92rhp1uRd7yNEiApkgxnUfWNHEhuA5G_PlxE1CQcH2hgStQ9LMCcmULQ_008ow5lnRbO8-hZswMCU6QVd7Gri8zbst8u20koJxVRNqLYQvZ61uARciDeT6ukpp63a_Gc7uPMq9z3pFYR6msuVgUD7DQmVpIPLrdA2NKjtJBpYAXyEzfJQ0NXgh5ny0kyes31bReCYHW2qYTddG76JTUv2HY94HkgU14ak3Y-ByYwsW7EITj_LbnTm7G7sNuCygA"/>
+</div>
+</article>
+<article class="flex gap-4 items-start group">
+<div class="flex-1">
+<span class="font-label-caps text-primary opacity-70 mb-1 block">ARTISTRY</span>
+<h3 class="font-h2 text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">Monochrome Musings: A Photographic Journey</h3>
+<div class="flex items-center gap-2 text-outline text-sm">
+<span>3 min read</span>
+<span>•</span>
+<span>Dec 08</span>
+</div>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden premium-shadow">
+<img alt="Black and white landscape" class="w-full h-full object-cover" data-alt="A dramatic black and white high-contrast photo of misty mountains and a single silhouetted tree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNA6udvDPSeDdU4wihzZX3WVLG5o6qo0pk3DU6m1Kc_P9gqI2JVFZk8Tyv7Q62rfsbWeKuCAMNFV7bKoFGYKQ4nHKtQG9jbStQzo4mck8tuIKx5DRYd2cxi_1Vlp3auhbAE-vsqzAyERXJv4EzE2XXF-ZPCQonUczkLHs_W1nNwbT5-dNHb-mRQcmZU_MN0Eica6S-pCeftDsYtuSrKYHvDA0WoRIEmgzBvETrGh7jZbuKr2fRAj3iySpiN1g5gOSfD9r0MQJ0Cg"/>
+</div>
+</article>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full active-shadow flex items-center justify-center active:scale-95 duration-200 z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="edit_note">edit_note</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-[#FAF9F6]/80 backdrop-blur-md dark:bg-stone-950/80 z-50 border-t border-stone-100 dark:border-stone-900 shadow-[0_-8px_30px_rgba(210,180,140,0.12)]">
+<!-- Feed - Active -->
+<a class="flex flex-col items-center justify-center text-[#D2B48C] dark:text-[#E6D2B5] scale-110 transition-transform active:translate-y-[-2px] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Feed</span>
+</a>
+<!-- Write - Inactive -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#D2B48C] transition-colors active:translate-y-[-2px] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Write</span>
+</a>
+<!-- Profile - Inactive -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#D2B48C] transition-colors active:translate-y-[-2px] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person_2">person_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

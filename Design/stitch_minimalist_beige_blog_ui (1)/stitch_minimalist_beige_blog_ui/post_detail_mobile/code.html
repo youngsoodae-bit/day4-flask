@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5e604d",
+                        "error": "#ba1a1a",
+                        "tertiary": "#5e5f5d",
+                        "secondary-fixed-dim": "#c8c8b0",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d1c5b8",
+                        "tertiary-container": "#b9b9b6",
+                        "surface-tint": "#725a39",
+                        "surface-bright": "#fff8f3",
+                        "inverse-primary": "#e1c299",
+                        "on-primary-container": "#5b4526",
+                        "inverse-surface": "#343029",
+                        "outline": "#7f766a",
+                        "surface-container": "#f6ece3",
+                        "primary-fixed": "#feddb3",
+                        "on-secondary-container": "#636451",
+                        "surface-container-high": "#f0e7dd",
+                        "secondary-container": "#e1e1c9",
+                        "on-primary-fixed": "#281801",
+                        "on-secondary-fixed": "#1b1d0e",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#d2b48c",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f8efe5",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#eae1d7",
+                        "surface": "#fff8f3",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#464745",
+                        "tertiary-fixed": "#e3e2e0",
+                        "surface-container-low": "#fbf2e8",
+                        "on-surface": "#1f1b15",
+                        "background": "#fff8f3",
+                        "primary": "#725a39",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4d453c",
+                        "surface-dim": "#e1d9cf",
+                        "secondary-fixed": "#e4e4cc",
+                        "on-secondary-fixed-variant": "#474836",
+                        "on-primary-fixed-variant": "#584324",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "primary-fixed-dim": "#e1c299",
+                        "on-tertiary-container": "#484a48",
+                        "surface-variant": "#eae1d7",
+                        "on-background": "#1f1b15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "container-max": "1120px",
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAF9F6;
+        }
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased bg-[#FAF9F6]">
+<!-- TopAppBar -->
+<header class="bg-[#FAF9F6] dark:bg-stone-950 font-['Plus_Jakarta_Sans'] antialiased tracking-tight docked full-width top-0 sticky z-50 border-b border-stone-100 dark:border-stone-900 shadow-[0_4px_20px_rgba(74,69,62,0.05)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<button class="active:scale-95 duration-200 ease-in-out hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-100" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-xl font-semibold text-stone-800 dark:text-stone-100 italic">The Curator</h1>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-stone-100 shadow-sm">
+<img alt="User Profile" data-alt="close-up portrait of a serene woman with natural lighting and soft warm tones, professional photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd-2NDBCm6w3znuIN6rwlHiBgfZlWdK_9RMV9bBZkZkZqf4gDTO1SDkpluwUNywjIbA2lLUP52V98XNX6S_JKK2Xrq906qudvtrQZI5n-ftafjqMOFDz5WpOtz5yZ2NZPYUS2H89FFvtT8i-S2QnlYGpIBzQ6z4psLCTEyI42t8Pp2Y0ZonlBxDWxNYlgJKKVlrw42eJvzNmQXKouPEw5QOGw3fpqp1pnXggCg5ETk9m99J8j7UYwEsC1GxXPhYNVgWMFK-3Wpzg"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-md mx-auto px-margin-mobile pb-32 pt-8">
+<!-- Post Header -->
+<div class="mb-stack-md">
+<span class="font-label-caps text-label-caps text-primary mb-2 inline-block bg-primary/10 px-3 py-1 rounded-full">Interior Design</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-4">The Quiet Luxury of Slow Living in Kyoto</h1>
+<!-- Author Info -->
+<div class="flex items-center gap-3 py-4 border-y border-stone-100">
+<div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
+<img alt="Author" data-alt="Side profile portrait of a thoughtful man in his 30s wearing a linen shirt, warm morning light, soft focus library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvY2yik6aGOFgZ1GITyh3ErP2CjKSbUSQgj5kKWbHip12oykWtdajxvMmLjNlC54TWrtbCQs4YNZ5sJGmO4M5a8pCBHXDn16HfUN4n25-RyyQuELNOGyfEoKOwQVEddWjqPni4umlosk-_kDlz-dcXcu9x9tRxLnI-Ha5K1XCB3HjGt5t-Zwf4z86ditOrAMFv_RWwsG2A3-BcUOv8Ata2NEUulmoqZFHFoXJUYxVYnPX8Mc1x9pUbHhuDto-VSUy2eacO581E3Q"/>
+</div>
+<div>
+<p class="font-body-md font-semibold text-on-surface">Julian Thorne</p>
+<p class="font-label-caps text-on-surface-variant text-[10px]">Published Oct 14, 2023 · 8 min read</p>
+</div>
+</div>
+</div>
+<!-- Featured Image -->
+<div class="rounded-lg overflow-hidden mb-stack-md shadow-[0_4px_20px_rgba(74,69,62,0.05)]">
+<img alt="Post Hero" class="w-full h-64 object-cover" data-alt="a minimalist japanese tea room with tatami mats, sliding paper screens, and a single branch in a vase, sunbeams falling on the floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAchYN64R3IeNmQbLGzTUShlI6fRjUvi8VGbuWnHM9jVWP8F7sIsV0AMgF4FOq-ON9nWW5XFMHSSlrASS14v-W9gjv67EdFjgK0CBVQ165Dzi9JhRK9U4T_SJCHb7SwD0ew7nim2oJM3U73lg4tnfMjtrSCwaLR9NdadNIyz7J_BxlVQ4wN9MDct-CdNb8cbE8Zw-RYpN-lHSlDAz5kjCUC0aHQmdNzD3um6Rdg18owQFilLqCcSgYIx8khvlpse0rzFJb9xnwWXw"/>
+</div>
+<!-- Article Body -->
+<article class="article-content font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>True luxury isn't found in excess, but in the deliberate curation of space and time. In the heart of Kyoto, there exists a philosophy of living that prioritizes the sensory experience of the present moment above all else.</p>
+<!-- Pull Quote -->
+<blockquote class="border-l-4 border-primary pl-6 my-stack-md italic font-body-lg text-on-surface">
+                "The space between the objects is just as important as the objects themselves. It is where the spirit breathes."
+            </blockquote>
+<p>When we design our environments with intention, we create more than just aesthetic beauty. We create a sanctuary for our mental well-being. This "Soft Minimalism" is characterized by tactile textures—hand-woven linens, unrefined wood, and stone polished only by the passage of time.</p>
+<div class="my-stack-md rounded-lg overflow-hidden">
+<img alt="Detail texture" class="w-full h-48 object-cover" data-alt="close-up of artisan ceramic textures and natural linen fabric with soft side lighting and warm earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQClClXRaxZ17WlRfScY_8_v5naVxfBVr6CxUCoL2EUottzmLuryYmbX6HRSZJyyFPm8mbe1eGwmjXOpeds0XBHa-oLsSeW3-BrAX8w5MW2CYbWRSPc8xTi_QbkGzD3uW6MdDVTfctB7wNKI1pSVo8Eeay9gVuvqyMv1C2fRqF5129MLQCAwFJ53lg-gX_29uQUjrOoR5HgTku9YjRZsXj21XYJRABYXm7Ik0QT-rLZhmLB6FIuOAAys_Z-fiz9lcNCArkGXSfw"/>
+</div>
+<p>Every element in a home should serve a purpose, whether functional or emotional. The rustle of a silk curtain, the warmth of a morning sunbeam on a clay vessel—these are the small, quiet luxuries that define a life lived slowly.</p>
+</article>
+<!-- Footer Actions Area (Asymmetric Layout) -->
+<div class="mt-stack-lg pt-stack-md border-t border-stone-100">
+<div class="flex flex-col gap-4">
+<div class="flex gap-4">
+<button class="flex-1 bg-primary text-on-primary py-4 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(210,180,140,0.12)] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+                        Edit Story
+                    </button>
+<button class="flex-1 bg-surface-container border border-outline-variant text-on-surface py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-surface-variant active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+                        Share
+                    </button>
+</div>
+<button class="w-full border border-error/20 text-error py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-error/5 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+                    Remove Post
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on desktop via shell logic but this is mobile version) -->
+<nav class="bg-[#FAF9F6]/80 backdrop-blur-md dark:bg-stone-950/80 fixed bottom-0 w-full z-50 border-t border-stone-100 dark:border-stone-900 shadow-[0_-8px_30px_rgba(210,180,140,0.12)]">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-[#D2B48C] dark:text-[#E6D2B5] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#D2B48C] transition-colors active:translate-y-[-2px] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Write</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#D2B48C] transition-colors active:translate-y-[-2px] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person_2">person_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
