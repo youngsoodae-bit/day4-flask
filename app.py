@@ -22,11 +22,39 @@ def init_db():
             )
         ''')
 
+SORT_OPTIONS = {
+    'newest': 'created_at DESC',
+    'oldest': 'created_at ASC',
+    'title':  'title ASC',
+}
+
 @app.route('/')
 def post_list():
+    page  = request.args.get('page', 1, type=int)
+    query = request.args.get('q', '').strip()
+    sort  = request.args.get('sort', 'newest')
+    if sort not in SORT_OPTIONS:
+        sort = 'newest'
+    order = SORT_OPTIONS[sort]
+    per_page = 10
     with get_db() as conn:
-        posts = conn.execute('SELECT * FROM post ORDER BY created_at DESC').fetchall()
-    return render_template('post_list.html', posts=posts)
+        if query:
+            like = f'%{query}%'
+            total = conn.execute(
+                'SELECT COUNT(*) FROM post WHERE title LIKE ? OR content LIKE ?', (like, like)
+            ).fetchone()[0]
+            posts = conn.execute(
+                f'SELECT * FROM post WHERE title LIKE ? OR content LIKE ? ORDER BY {order} LIMIT ? OFFSET ?',
+                (like, like, per_page, (page - 1) * per_page)
+            ).fetchall()
+        else:
+            total = conn.execute('SELECT COUNT(*) FROM post').fetchone()[0]
+            posts = conn.execute(
+                f'SELECT * FROM post ORDER BY {order} LIMIT ? OFFSET ?',
+                (per_page, (page - 1) * per_page)
+            ).fetchall()
+    total_pages = (total + per_page - 1) // per_page
+    return render_template('post_list.html', posts=posts, page=page, total_pages=total_pages, query=query, total=total, sort=sort)
 
 @app.route('/post/<int:id>')
 def post_detail(id):
